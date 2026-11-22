@@ -1,23 +1,23 @@
-outfile:addstud.o deletestud.o showstud.o modifystud.o savestud.o sortstud.o main.o
-	cc addstud.c deletestud.c showstud.c modifystud.c savestud.c sortstud.c main.c -o student
+outfile:add_student.o delete_student.o Show_student.o modify_student.o save_student.o sort_student.o main.o
+	cc add_student.c delete_student.c Show_student.c modify_student.c save_student.c sort_student.c main.c -o student
 
-addstud.o:addstud.c
-	cc -c addstud.c
+add_student.o:add_student.c
+	cc -c add_student.c
 
-deletestud.o:deletestud.c
-	cc -c deletestud.c
+delete_student.o:delete_student.c
+	cc -c delete_student.c
 
-showstud.o:showstud.c
-	cc -c showstud.c
+Show_student.o:Show_student.c
+	cc -c Show_student.c
 
-modifystud.o:modifystud.c
-	cc -c modifystud.c
+modify_student.o:modify_student.c
+	cc -c modify_student.c
 
-savestud.o:savestud.c
-	cc -c savestud.c
+save_student.o:save_student.c
+	cc -c save_student.c
 
-sortstud.o:sortstud.c
-	cc -c sortstud.c
+sort_student.o:sort_student.c
+	cc -c sort_student.c
 
 main.o:main.c
 	cc -c main.c
