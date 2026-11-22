@@ -1,14 +1,10 @@
 #include "header.h"
-
 ST *hptr = NULL;
-
 int main()
 {
     char choice;
     char ch;
-
-    load_student();
-
+    stud_load();
     while(1)
     {
         printf("\nSTUDENT RECORD MENU:\n");
@@ -19,55 +15,46 @@ int main()
         printf("\nV/v: Save");
         printf("\nT/t: Sort the List");
         printf("\nE/e: Exit");
-
         printf("\nEnter Your Choice:");
         scanf(" %c", &choice);
-
         switch(choice)
         {
             case 'A':
             case 'a':
-                add_student();
+                stud_add();
                 break;
-
             case 'D':
             case 'd':
-                delete_student();
+                stud_del();
                 break;
-
             case 'S':
             case 's':
-                show_student();
+                stud_show();
                 break;
-
             case 'M':
             case 'm':
-                modify_student();
+                stud_mod();
                 break;
-
             case 'V':
             case 'v':
-                save_student();
+                stud_save();
                 break;
-
             case 'T':
             case 't':
-                sort_student();
+                stud_sort();
                 break;
-
             case 'E':
             case 'e':
                 printf("\nS/s: Save and Exit");
                 printf("\nE/e: Exit Without Saving");
                 printf("\nEnter Your Choice: ");
-                scanf(" %c", &ch);
-
-                if(ch == 'S' || ch == 's')
+                scanf(" %c",&ch);
+                if(ch=='S'||ch=='s')
                 {
-                    save_student();
+                    stud_save();
                     return 0;
                 }
-                else if(ch == 'E' || ch == 'e')
+                else if(ch=='E'||ch=='e')
                 {
                     return 0;
                 }
@@ -76,7 +63,6 @@ int main()
                     printf("\nInvalid Choice\n");
                 }
                 break;
-
             default:
                 printf("\nInvalid Choice\n");
         }
