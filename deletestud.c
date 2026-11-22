@@ -1,5 +1,5 @@
 #include "header.h"
-void delete_student(void)
+void stud_del(void)
 {
     ST *temp;
     ST *prev;
