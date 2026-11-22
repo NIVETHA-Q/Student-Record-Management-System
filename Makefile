@@ -1,4 +1,4 @@
-outfile:add_student.o delete_student.o Show_student.o modify_student.o save_student.o sort_student.o main.o
+student:add_student.o delete_student.o Show_student.o modify_student.o save_student.o sort_student.o main.o
 	cc add_student.c delete_student.c Show_student.c modify_student.c save_student.c sort_student.c main.c -o student
 
 add_student.o:add_student.c
