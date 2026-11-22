@@ -11,17 +11,16 @@ int main()
 
     while(1)
     {
-        printf("\n===== STUDENT RECORD MANAGEMENT =====\n");
+        printf("\nSTUDENT RECORD MENU:\n");
+        printf("\nA/a: Add New Record");
+        printf("\nD/d: Delete a Record");
+        printf("\nS/s: Show the List");
+        printf("\nM/m: Modify a Record");
+        printf("\nV/v: Save");
+        printf("\nT/t: Sort the List");
+        printf("\nE/e: Exit");
 
-        printf("\nA - Add New Student Record");
-        printf("\nD - Delete Student Record");
-        printf("\nM - Modify Student Record");
-        printf("\nS - Show All Student Records");
-        printf("\nT - Sort Student Records");
-        printf("\nV - Save Student Records");
-        printf("\nE - Exit");
-
-        printf("\nEnter your choice: ");
+        printf("\nEnter Your Choice:");
         scanf(" %c", &choice);
 
         switch(choice)
@@ -36,19 +35,14 @@ int main()
                 delete_student();
                 break;
 
-            case 'M':
-            case 'm':
-                modify_student();
-                break;
-
             case 'S':
             case 's':
                 show_student();
                 break;
 
-            case 'T':
-            case 't':
-                sort_student();
+            case 'M':
+            case 'm':
+                modify_student();
                 break;
 
             case 'V':
@@ -56,14 +50,16 @@ int main()
                 save_student();
                 break;
 
+            case 'T':
+            case 't':
+                sort_student();
+                break;
+
             case 'E':
             case 'e':
-
-                printf("\nS - Save Changes and Exit");
-                printf("\nE - Exit Without Saving");
-                printf("\nC - Cancel");
-
-                printf("\nEnter your choice: ");
+                printf("\nS/s: Save and Exit");
+                printf("\nE/e: Exit Without Saving");
+                printf("\nEnter Your Choice: ");
                 scanf(" %c", &ch);
 
                 if(ch == 'S' || ch == 's')
@@ -75,20 +71,14 @@ int main()
                 {
                     return 0;
                 }
-                else if(ch == 'C' || ch == 'c')
-                {
-                    break;
-                }
                 else
                 {
-                    printf("\nInvalid Choice!");
+                    printf("\nInvalid Choice\n");
                 }
                 break;
 
             default:
-                printf("\nInvalid Choice!");
+                printf("\nInvalid Choice\n");
         }
     }
-
-    return 0;
 }
